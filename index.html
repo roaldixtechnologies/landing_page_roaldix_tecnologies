@@ -1,0 +1,917 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Primary Meta Tags -->
+    <title>ROALDIX Technologies | Desarrollo de Software, Soluciones Web e Informatización</title>
+    <meta name="title" content="ROALDIX Technologies | Desarrollo de Software, Soluciones Web e Informatización">
+    <meta name="description" content="En ROALDIX Technologies transformamos ideas en soluciones tecnológicas funcionales, eficientes y escalables. Desarrollo de software a medida, sitios web e informatización de procesos para empresas.">
+    <meta name="keywords" content="ROALDIX Technologies, desarrollo de software, soluciones web, informatización de procesos, desarrollo a medida, inteligencia artificial, transformación digital, desarrollo web México, soporte tecnológico">
+    <meta name="author" content="ROALDIX Technologies">
+    <meta name="publisher" content="ROALDIX Technologies">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="theme-color" content="#0a0f1d">
+    <meta name="msapplication-navbutton-color" content="#0a0f1d">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="geo.region" content="MX">
+    <meta name="geo.placename" content="México">
+    <link rel="canonical" href="./">
+    <link rel="alternate" hreflang="es" href="./">
+    <link rel="alternate" hreflang="en" href="./?lang=en">
+    <link rel="alternate" hreflang="x-default" href="./">
+
+    <!-- Open Graph / Facebook / LinkedIn / WhatsApp -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="./">
+    <meta property="og:site_name" content="ROALDIX Technologies">
+    <meta property="og:title" content="ROALDIX Technologies | Soluciones Digitales e Informatización">
+    <meta property="og:description" content="Convertimos ideas y necesidades empresariales en soluciones tecnológicas funcionales. Desarrollo de software, plataformas web e informatización de procesos.">
+    <meta property="og:image" content="img/about_tech.jpg">
+    <meta property="og:image:alt" content="ROALDIX Technologies - Desarrollo de Software">
+    <meta property="og:locale" content="es_MX">
+    <meta property="og:locale:alternate" content="en_US">
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="ROALDIX Technologies | Soluciones Digitales e Informatización">
+    <meta name="twitter:description" content="Convertimos ideas y necesidades empresariales en soluciones tecnológicas funcionales. Desarrollo de software, plataformas web e informatización de procesos.">
+    <meta name="twitter:image" content="img/about_tech.jpg">
+
+    <!-- Structured Data (Schema.org JSON-LD for Search Engines) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "ROALDIX Technologies",
+      "image": "img/about_tech.jpg",
+      "description": "Desarrollo de software a medida, soluciones web, informatización de procesos e innovación tecnológica para empresas.",
+      "telephone": "+529715644650",
+      "email": "info@codecoresystems.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "MX"
+      },
+      "priceRange": "$$",
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday"
+        ],
+        "opens": "09:00",
+        "closes": "18:00"
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Servicios Tecnológicos",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Desarrollo de software a medida"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Diseño y desarrollo web"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Informatización de procesos"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Inteligencia artificial y automatización"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Bases de datos"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Soporte tecnológico continuo"
+            }
+          }
+        ]
+      }
+    }
+    </script>
+    
+    <!-- Google Fonts & FontAwesome -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            /* Premium Color Palette */
+            --primary: #0a0f1d;
+            --primary-light: #162032;
+            --secondary: #3b82f6;
+            --accent: #0ea5e9;
+            --accent-glow: rgba(14, 165, 233, 0.4);
+            
+            --bg-main: #f8fafc;
+            --bg-alt: #f1f5f9;
+            
+            --text-main: #334155;
+            --text-muted: #64748b;
+            --text-light: #f8fafc;
+            
+            --gradient-hero: linear-gradient(135deg, #0a0f1d 0%, #1e3a8a 100%);
+            --gradient-accent: linear-gradient(135deg, #3b82f6 0%, #0ea5e9 100%);
+            
+            /* Container Widths & Spacing */
+            --nav-height: 64px;
+            --container-max: 1500px;
+            --container-padding: 4%;
+            
+            /* Shadows & Transitions */
+            --shadow-soft: 0 8px 24px -4px rgba(0, 0, 0, 0.05);
+            --shadow-hover: 0 16px 32px -4px rgba(14, 165, 233, 0.15);
+            --transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+            
+            /* Radius */
+            --radius-lg: 20px;
+            --radius-md: 14px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Outfit', 'Inter', sans-serif;
+        }
+
+        /* Prevent page-level scrollbar above header */
+        html, body {
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+            background: var(--bg-main);
+            color: var(--text-main);
+            line-height: 1.5;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Typography */
+        h1, h2, h3, h4 { font-family: 'Outfit', sans-serif; color: var(--primary); line-height: 1.15; }
+        p { font-family: 'Inter', sans-serif; font-size: 1.05rem; color: var(--text-muted); }
+        .text-gradient { background: var(--gradient-accent); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .text-white { color: var(--text-light); }
+        .text-center { text-align: center; }
+        .text-left { text-align: left; }
+        .mx-auto { margin-left: auto; margin-right: auto; }
+
+        /* Navigation - Positioned at top without scrollbar */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+            height: var(--nav-height);
+            background: rgba(10, 15, 29, 0.95);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+            display: flex;
+            align-items: center;
+        }
+        .nav-container {
+            width: 100%;
+            max-width: var(--container-max);
+            margin: 0 auto;
+            padding: 0 var(--container-padding);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo { color: white; font-size: 1.45rem; font-weight: 800; display: flex; align-items: center; gap: 10px; letter-spacing: 0.5px; }
+        .logo i { color: var(--accent); }
+        .nav-right { display: flex; align-items: center; gap: 24px; }
+        .nav-links { display: flex; gap: 24px; align-items: center; }
+        .nav-links a { color: #e2e8f0; text-decoration: none; font-weight: 500; font-size: 0.95rem; transition: var(--transition); }
+        .nav-links a:hover { color: var(--accent); }
+        
+        /* Language Switcher */
+        .lang-switch {
+            display: flex; gap: 4px; background: rgba(255,255,255,0.1); padding: 4px; border-radius: 50px;
+        }
+        .lang-btn {
+            background: transparent; color: white; border: none; padding: 4px 10px; border-radius: 50px;
+            cursor: pointer; font-weight: 600; font-size: 0.85rem; transition: var(--transition);
+        }
+        .lang-btn.active { background: var(--gradient-accent); box-shadow: 0 0 10px var(--accent-glow); }
+
+        .btn-nav { background: var(--gradient-accent); padding: 8px 20px; border-radius: 50px; color: white !important; font-weight: 600; font-size: 0.9rem; }
+        .btn-nav:hover { box-shadow: 0 4px 15px var(--accent-glow); transform: translateY(-2px); }
+
+        /* Main Scroll Wrapper - Scrollbar starts BELOW the menu */
+        .main-scroll-wrapper {
+            height: calc(100vh - var(--nav-height));
+            margin-top: var(--nav-height);
+            width: 100%;
+            overflow-y: auto;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        /* Sleek Scrollbar */
+        .main-scroll-wrapper::-webkit-scrollbar {
+            width: 10px;
+        }
+        .main-scroll-wrapper::-webkit-scrollbar-track {
+            background: #0a0f1d;
+        }
+        .main-scroll-wrapper::-webkit-scrollbar-thumb {
+            background: #3b82f6;
+            border-radius: 6px;
+            border: 2px solid #0a0f1d;
+        }
+        .main-scroll-wrapper::-webkit-scrollbar-thumb:hover {
+            background: #0ea5e9;
+        }
+
+        /* Container Utility - Compact Spacing */
+        .container { max-width: var(--container-max); margin: 0 auto; padding: 25px var(--container-padding); }
+        .section-full { width: 100%; position: relative; }
+        .bg-dark { background: var(--primary); }
+        .bg-light { background: var(--bg-alt); }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            background: var(--gradient-hero); 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 35px 0 30px;
+            overflow: hidden;
+        }
+        .hero-bg-shapes { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0; overflow: hidden; }
+        .shape { position: absolute; border-radius: 50%; filter: blur(80px); }
+        .shape-1 { width: 450px; height: 450px; background: rgba(59, 130, 246, 0.25); top: -80px; right: -80px; }
+        .shape-2 { width: 500px; height: 500px; background: rgba(14, 165, 233, 0.18); bottom: -150px; left: -150px; }
+        
+        .hero-content { position: relative; z-index: 1; text-align: center; max-width: 1100px; padding: 0 var(--container-padding); }
+        
+        /* Sticky Badge to top of container */
+        .badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.08);
+            color: var(--accent);
+            padding: 6px 18px;
+            border-radius: 50px;
+            font-size: 0.88rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 5px;
+            margin-bottom: 12px;
+            border: 1px solid rgba(14, 165, 233, 0.3);
+        }
+        .hero h1 { font-size: clamp(2.4rem, 5vw, 4.4rem); color: white; margin-bottom: 14px; font-weight: 800; }
+        .hero-description { font-size: clamp(1.02rem, 1.8vw, 1.2rem); color: #cbd5e1; max-width: 820px; margin: 0 auto 20px; line-height: 1.5; }
+        .hero-tags { display: flex; justify-content: center; flex-wrap: wrap; gap: 14px; margin-bottom: 24px; }
+        .hero-tags span {
+            background: rgba(255,255,255,0.06); padding: 8px 18px; border-radius: 12px; color: white;
+            font-size: 0.98rem; display: flex; align-items: center; gap: 8px; border: 1px solid rgba(255,255,255,0.1);
+        }
+        .hero-tags span i { color: var(--accent); }
+        
+        /* Elevated Hero Buttons */
+        .hero-actions { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-bottom: 10px; }
+        
+        /* Buttons */
+        .btn-primary {
+            background: var(--gradient-accent); color: white; padding: 14px 34px; border-radius: 50px;
+            text-decoration: none; font-weight: 600; font-size: 1.05rem; transition: var(--transition);
+            box-shadow: 0 8px 20px rgba(14, 165, 233, 0.3); border: none; cursor: pointer; display: inline-flex; align-items: center; gap: 10px;
+        }
+        .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 12px 28px rgba(14, 165, 233, 0.4); color: white; }
+        
+        .btn-secondary {
+            background: rgba(255,255,255,0.1); backdrop-filter: blur(5px); color: white; padding: 14px 34px;
+            border-radius: 50px; text-decoration: none; font-weight: 600; font-size: 1.05rem;
+            border: 1px solid rgba(255,255,255,0.25); transition: var(--transition); display: inline-flex; align-items: center; gap: 10px;
+        }
+        .btn-secondary:hover { background: rgba(255,255,255,0.2); transform: translateY(-3px); color: white; }
+
+        /* Global Section Titles & Badges */
+        .section-badge {
+            display: inline-block; color: var(--secondary); font-weight: 700; font-size: 0.88rem;
+            margin-bottom: 6px; text-transform: uppercase; letter-spacing: 1.5px;
+        }
+        .badge-light { color: var(--accent); }
+        .section-title { font-size: clamp(2rem, 3.2vw, 2.8rem); margin-bottom: 10px; }
+        .section-subtitle { font-size: 1.1rem; margin: 0 auto 20px; max-width: 750px; }
+        .lead-text { font-size: 1.18rem; color: var(--text-main); font-weight: 500; margin-bottom: 10px; }
+
+        /* Grids */
+        .grid-2 { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 35px; }
+        .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 20px; }
+        .grid-4 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+        .align-center { align-items: center; }
+
+        /* Glassmorphism Cards */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.75); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.6); box-shadow: var(--shadow-soft);
+            border-radius: var(--radius-lg); padding: 25px; transition: var(--transition);
+        }
+        .glass-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-hover); border-color: rgba(59, 130, 246, 0.3); }
+
+        /* About & Vision/Mission */
+        .vision-mission-cards { display: grid; grid-template-columns: 1fr; gap: 14px; margin-top: 20px; }
+        .vm-card { display: flex; gap: 18px; align-items: flex-start; padding: 20px; }
+        .vm-card i { font-size: 2.2rem; }
+        .vm-card h4 { font-size: 1.25rem; margin-bottom: 6px; }
+
+        /* About Image */
+        .about-image-card {
+            position: relative;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: 0 16px 36px -8px rgba(10, 15, 29, 0.25);
+            border: 1px solid rgba(255, 255, 255, 0.8);
+            transition: var(--transition);
+        }
+        .about-image-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-hover); }
+        .about-img {
+            width: 100%;
+            height: 100%;
+            max-height: 440px;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* Values (Compact) */
+        .value-card {
+            background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1);
+            padding: 24px 20px; border-radius: var(--radius-md); transition: var(--transition);
+        }
+        .value-card:hover { background: rgba(255,255,255,0.07); transform: translateY(-4px); border-color: rgba(255,255,255,0.2); }
+        .value-icon {
+            width: 54px; height: 54px; background: var(--gradient-accent); border-radius: 14px;
+            display: flex; align-items: center; justify-content: center; font-size: 1.5rem; color: white; margin-bottom: 16px;
+        }
+        .value-card h4 { color: white; font-size: 1.3rem; margin-bottom: 8px; }
+        .value-card p { color: #94a3b8; font-size: 0.98rem; }
+
+        /* Services (Compact) */
+        .service-card {
+            background: white; padding: 30px 24px; border-radius: var(--radius-md);
+            box-shadow: var(--shadow-soft); border: 1px solid #e2e8f0; transition: var(--transition);
+            position: relative; overflow: hidden;
+        }
+        .service-card::before {
+            content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 4px;
+            background: var(--gradient-accent); transform: scaleX(0); transform-origin: left; transition: var(--transition);
+        }
+        .service-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-hover); }
+        .service-card:hover::before { transform: scaleX(1); }
+        .service-icon { font-size: 2.6rem; color: var(--secondary); margin-bottom: 18px; }
+        .service-card h3 { font-size: 1.5rem; margin-bottom: 10px; }
+        .service-card p { font-size: 1rem; }
+
+        /* Methodology - Full Width Tight */
+        .timeline-horizontal {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 12px;
+            margin-top: 18px;
+            width: 100%;
+        }
+        .timeline-card {
+            background: white; padding: 22px 14px; border-radius: var(--radius-md);
+            box-shadow: var(--shadow-soft); text-align: center; position: relative;
+            transition: var(--transition); border-top: 3px solid var(--accent);
+        }
+        .timeline-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-hover); }
+        .t-num { font-size: 2rem; font-weight: 800; color: rgba(59, 130, 246, 0.15); margin-bottom: 8px; line-height: 1; }
+        .timeline-card h4 { font-size: 1.15rem; margin-bottom: 8px; }
+        .timeline-card p { font-size: 0.9rem; }
+
+        /* Feature Boxes (Why us & Sectors) */
+        .feature-box { padding: 35px 30px; }
+        .box-title { font-size: 1.85rem; margin-bottom: 20px; }
+        .accent-box { background: var(--gradient-hero) !important; border: none; color: white; }
+        .accent-box p { color: #cbd5e1; }
+        .styled-list { list-style: none; }
+        .styled-list li {
+            padding-left: 32px; position: relative; margin-bottom: 12px;
+            font-size: 1.05rem; color: var(--text-main); line-height: 1.45;
+        }
+        .styled-list li::before {
+            content: '\f058'; font-family: 'Font Awesome 6 Free'; font-weight: 900;
+            position: absolute; left: 0; color: var(--accent); font-size: 1.25rem;
+        }
+        .list-light li { color: #e2e8f0; }
+
+        /* FAQ - Centered Text to Fill Full Width */
+        .faq-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(420px, 1fr)); gap: 20px; width: 100%; }
+        .faq-item {
+            padding: 26px 30px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .faq-q { font-size: 1.25rem; font-weight: 700; color: var(--primary); margin-bottom: 10px; text-align: center; }
+        .faq-a { font-size: 1.02rem; text-align: center; max-width: 90%; }
+
+        /* Footer - Compact & Closer to Content */
+        .footer { background: var(--primary); position: relative; color: white; padding: 40px 0 20px; overflow: hidden; }
+        .footer-bg-shape { position: absolute; top: -50%; left: 0; width: 100%; height: 100%; background: radial-gradient(circle at center, rgba(37,99,235,0.15) 0%, transparent 60%); }
+        .footer-content { position: relative; z-index: 1; }
+        .footer-cta h2 { color: white; font-size: 2.6rem; margin-bottom: 10px; }
+        .footer-cta p { color: #94a3b8; font-size: 1.15rem; max-width: 780px; margin: 0 auto 30px; }
+
+        .contact-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; margin-bottom: 40px; }
+        .contact-card {
+            background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1);
+            padding: 28px 16px; border-radius: var(--radius-md); text-decoration: none; color: white;
+            transition: var(--transition); display: flex; flex-direction: column; align-items: center;
+        }
+        .contact-card:hover { background: rgba(255,255,255,0.1); transform: translateY(-4px); }
+        .contact-card i { font-size: 2.4rem; color: var(--accent); margin-bottom: 14px; }
+        .contact-card span { font-size: 0.95rem; color: #94a3b8; margin-bottom: 6px; text-transform: uppercase; letter-spacing: 1px; }
+        .contact-card strong { font-size: 1.18rem; font-weight: 600; }
+
+        .footer-bottom {
+            display: flex; justify-content: space-between; align-items: center;
+            border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px;
+        }
+        .footer-logo { font-size: 1.4rem; font-weight: 800; display: flex; align-items: center; gap: 10px; }
+        .footer-logo i { color: var(--accent); }
+        .footer-bottom p { font-size: 0.95rem; margin: 0; color: #64748b; }
+
+        /* Responsive Breakpoints */
+        @media (max-width: 1200px) {
+            .timeline-horizontal { grid-template-columns: repeat(3, 1fr); gap: 16px; }
+        }
+        @media (max-width: 1024px) {
+            .grid-2 { grid-template-columns: 1fr; gap: 30px; }
+            .grid-4 { grid-template-columns: repeat(2, 1fr); }
+            .about-image-card { max-width: 600px; margin: 0 auto; }
+        }
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .hero h1 { font-size: 2.4rem; }
+            .hero-tags { flex-direction: column; align-items: center; }
+            .hero-actions { flex-direction: column; width: 100%; }
+            .btn-primary, .btn-secondary { width: 100%; justify-content: center; }
+            .section-title { font-size: 2.1rem; }
+            .grid-4 { grid-template-columns: 1fr; }
+            .feature-box { padding: 25px 20px; }
+            .footer-bottom { flex-direction: column; gap: 15px; text-align: center; }
+            .faq-grid { grid-template-columns: 1fr; }
+            .timeline-horizontal { grid-template-columns: 1fr; }
+            .container { padding: 20px var(--container-padding); }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Main Fixed Navigation Bar (Scrollbar starts BELOW this) -->
+    <nav class="navbar" id="topNavbar">
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fas fa-layer-group"></i> ROALDIX
+            </div>
+            <div class="nav-right">
+                <div class="nav-links">
+                    <a href="#nosotros" data-i18n="nav-about">Nosotros</a>
+                    <a href="#servicios" data-i18n="nav-services">Servicios</a>
+                    <a href="#sectores" data-i18n="nav-sectors">Sectores</a>
+                    <a href="#faq" data-i18n="nav-faq">Preguntas</a>
+                    <a href="#contacto" class="btn-nav" data-i18n="nav-contact">Cotizar <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="lang-switch">
+                    <button class="lang-btn active" onclick="setLang('es')">🇲🇽 ES</button>
+                    <button class="lang-btn" onclick="setLang('en')">🇺🇸 EN</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Scrollable Page Container (Vertical Scrollbar begins right here) -->
+    <div class="main-scroll-wrapper" id="pageScroll">
+
+        <!-- Hero Section -->
+        <header class="hero">
+            <div class="hero-bg-shapes">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+            </div>
+            <div class="hero-content">
+                <div class="badge" data-i18n="hero-badge">Innovación Tecnológica</div>
+                <h1 data-i18n="hero-title">Tecnología que transforma ideas en <span class="text-gradient">soluciones digitales</span></h1>
+                
+                <p class="hero-description" data-i18n="hero-desc">
+                    Convertimos ideas y necesidades empresariales en soluciones tecnológicas funcionales, eficientes y escalables. Desarrollamos herramientas digitales que ayudan a las empresas a optimizar operaciones y aprovechar la transformación digital.
+                </p>
+                
+                <div class="hero-tags">
+                    <span data-i18n="hero-tag1"><i class="fas fa-code"></i> Desarrollo de software</span>
+                    <span data-i18n="hero-tag2"><i class="fas fa-globe"></i> Soluciones web</span>
+                    <span data-i18n="hero-tag3"><i class="fas fa-laptop-code"></i> Informatización</span>
+                </div>
+                
+                <div class="hero-actions">
+                    <a href="#servicios" class="btn-primary" data-i18n="hero-btn1">Conoce nuestros servicios</a>
+                    <a href="#contacto" class="btn-secondary" data-i18n="hero-btn2"><i class="fab fa-whatsapp"></i> Solicitar cotización</a>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <!-- 1. Quienes Somos & Mision/Vision -->
+            <section id="nosotros" class="container">
+                <div class="grid-2 align-center">
+                    <div class="about-content">
+                        <div class="section-badge" data-i18n="about-badge">1. ¿Quiénes somos?</div>
+                        <h2 class="section-title text-left" data-i18n="about-title">ROALDIX Technologies</h2>
+                        <p class="lead-text" data-i18n="about-lead">Somos una marca tecnológica enfocada en el desarrollo de software, la creación de soluciones digitales y la implementación de herramientas que contribuyen a mejorar la eficiencia de los negocios.</p>
+                        <p data-i18n="about-p">Creemos que la tecnología debe ser práctica, accesible y capaz de generar valor. Buscamos desarrollar soluciones que no solo respondan a los desafíos actuales, sino que permitan crecer, adaptarse y evolucionar en un entorno digital cada vez más competitivo.</p>
+                        
+                        <div class="vision-mission-cards">
+                            <div class="vm-card glass-card">
+                                <i class="fas fa-rocket text-gradient"></i>
+                                <div>
+                                    <h4 data-i18n="about-mission-t">Nuestra misión</h4>
+                                    <p data-i18n="about-mission-d">Desarrollar soluciones confiables y funcionales que ayuden a empresas a optimizar procesos.</p>
+                                </div>
+                            </div>
+                            <div class="vm-card glass-card">
+                                <i class="fas fa-eye text-gradient"></i>
+                                <div>
+                                    <h4 data-i18n="about-vision-t">Nuestra visión</h4>
+                                    <p data-i18n="about-vision-d">Consolidarnos como marca reconocida por nuestra innovación y compromiso digital.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Imagen de desarrollo de software -->
+                    <div class="about-image-card">
+                        <img src="img/about_tech.jpg" alt="ROALDIX Technologies - Equipo de desarrollo de software y tecnología" class="about-img" loading="lazy">
+                    </div>
+                </div>
+            </section>
+
+            <!-- 4. Valores (Compact Full-Width Section) -->
+            <section class="section-full bg-dark">
+                <div class="container">
+                    <div class="text-center" style="margin-bottom: 20px;">
+                        <div class="section-badge badge-light mx-auto" data-i18n="val-badge">4. Nuestros Valores</div>
+                        <h2 class="section-title text-white" data-i18n="val-title">Los pilares de nuestro trabajo</h2>
+                    </div>
+                    <div class="grid-4">
+                        <div class="value-card">
+                            <div class="value-icon"><i class="fas fa-lightbulb"></i></div>
+                            <h4 data-i18n="val-1-t">Innovación</h4>
+                            <p data-i18n="val-1-d">Exploramos nuevas ideas para desarrollar soluciones a necesidades reales.</p>
+                        </div>
+                        <div class="value-card">
+                            <div class="value-icon"><i class="fas fa-medal"></i></div>
+                            <h4 data-i18n="val-2-t">Calidad</h4>
+                            <p data-i18n="val-2-d">Priorizamos la funcionalidad, claridad de código y mejora continua.</p>
+                        </div>
+                        <div class="value-card">
+                            <div class="value-icon"><i class="fas fa-handshake"></i></div>
+                            <h4 data-i18n="val-3-t">Compromiso</h4>
+                            <p data-i18n="val-3-d">Soluciones alineadas con las necesidades de cada proyecto.</p>
+                        </div>
+                        <div class="value-card">
+                            <div class="value-icon"><i class="fas fa-sync"></i></div>
+                            <h4 data-i18n="val-4-t">Adaptabilidad</h4>
+                            <p data-i18n="val-4-d">Consideramos los recursos y metas específicas de cada cliente.</p>
+                        </div>
+                        <div class="value-card">
+                            <div class="value-icon"><i class="fas fa-comment-dots"></i></div>
+                            <h4 data-i18n="val-5-t">Transparencia</h4>
+                            <p data-i18n="val-5-d">Comunicación clara sobre alcance, costos y tiempos.</p>
+                        </div>
+                        <div class="value-card">
+                            <div class="value-icon"><i class="fas fa-lock"></i></div>
+                            <h4 data-i18n="val-6-t">Confidencialidad</h4>
+                            <p data-i18n="val-6-d">Tratamos la información con máxima responsabilidad y seguridad.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 5. Servicios -->
+            <section id="servicios" class="container">
+                <div class="section-header text-center">
+                    <div class="section-badge mx-auto" data-i18n="srv-badge">5. Nuestros servicios</div>
+                    <h2 class="section-title" data-i18n="srv-title">Soluciones tecnológicas a la medida</h2>
+                    <p class="section-subtitle" data-i18n="srv-sub">Potencia tu negocio con nuestras herramientas y experiencia digital.</p>
+                </div>
+                
+                <div class="grid-3">
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-code"></i></div>
+                        <h3 data-i18n="srv-1-t">Desarrollo a medida</h3>
+                        <p data-i18n="srv-1-d">Sistemas de gestión, aplicaciones operativas y herramientas digitales personalizadas.</p>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-laptop-code"></i></div>
+                        <h3 data-i18n="srv-2-t">Diseño Web</h3>
+                        <p data-i18n="srv-2-d">Páginas web corporativas y sitios optimizados adaptables a todos los dispositivos.</p>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-laptop-code"></i></div>
+                        <h3 data-i18n="srv-3-t">Informatización</h3>
+                        <p data-i18n="srv-3-d">Digitalización de flujos de trabajo, integración de sistemas y gestión eficiente de la información.</p>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-brain"></i></div>
+                        <h3 data-i18n="srv-4-t">Inteligencia artificial</h3>
+                        <p data-i18n="srv-4-d">Asistentes virtuales, procesamiento de documentos y soluciones inteligentes.</p>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-database"></i></div>
+                        <h3 data-i18n="srv-5-t">Bases de datos</h3>
+                        <p data-i18n="srv-5-d">Diseño, estructuración y migración de información de forma segura.</p>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-tools"></i></div>
+                        <h3 data-i18n="srv-6-t">Soporte tecnológico</h3>
+                        <p data-i18n="srv-6-d">Mantenimiento, actualizaciones y optimización de rendimiento continuo.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 6. Metodologia -->
+            <section class="section-full bg-light">
+                <div class="container">
+                    <div class="text-center">
+                        <div class="section-badge mx-auto" data-i18n="met-badge">6. Metodología</div>
+                        <h2 class="section-title" data-i18n="met-title">Cómo trabajamos</h2>
+                        <p class="section-subtitle" data-i18n="met-lead">Organizamos cada proyecto en 6 etapas clave para asegurar una entrega de calidad, enfocada en los objetivos acordados.</p>
+                    </div>
+                    
+                    <div class="timeline-horizontal">
+                        <div class="timeline-card">
+                            <div class="t-num">01</div>
+                            <h4 data-i18n="met-1-t">Análisis</h4>
+                            <p data-i18n="met-1-d">Identificamos el problema y definimos objetivos.</p>
+                        </div>
+                        <div class="timeline-card">
+                            <div class="t-num">02</div>
+                            <h4 data-i18n="met-2-t">Planificación</h4>
+                            <p data-i18n="met-2-d">Establecemos alcance y recursos.</p>
+                        </div>
+                        <div class="timeline-card">
+                            <div class="t-num">03</div>
+                            <h4 data-i18n="met-3-t">Diseño</h4>
+                            <p data-i18n="met-3-d">Estructura y experiencia de usuario.</p>
+                        </div>
+                        <div class="timeline-card">
+                            <div class="t-num">04</div>
+                            <h4 data-i18n="met-4-t">Desarrollo</h4>
+                            <p data-i18n="met-4-d">Construcción por etapas con buenas prácticas.</p>
+                        </div>
+                        <div class="timeline-card">
+                            <div class="t-num">05</div>
+                            <h4 data-i18n="met-5-t">Pruebas</h4>
+                            <p data-i18n="met-5-d">Validación de funcionamiento y corrección.</p>
+                        </div>
+                        <div class="timeline-card">
+                            <div class="t-num">06</div>
+                            <h4 data-i18n="met-6-t">Entrega</h4>
+                            <p data-i18n="met-6-d">Lanzamiento, mantenimiento y mejora.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- 7 & 8. ¿Por qué elegirnos? y Sectores -->
+            <section id="sectores" class="container">
+                <div class="grid-2">
+                    <div class="feature-box glass-card">
+                        <h2 class="box-title" data-i18n="why-title">7. ¿Por qué elegirnos?</h2>
+                        <ul class="styled-list">
+                            <li data-i18n="why-1"><strong>Soluciones adaptadas:</strong> Propuestas a partir de tus necesidades concretas.</li>
+                            <li data-i18n="why-2"><strong>Resultados prácticos:</strong> Tecnología enfocada en resolver problemas reales.</li>
+                            <li data-i18n="why-3"><strong>Visión de crecimiento:</strong> Desarrollos preparados para escalar a futuro.</li>
+                            <li data-i18n="why-4"><strong>Comunicación clara:</strong> Transparencia en entregables y responsabilidades.</li>
+                            <li data-i18n="why-5"><strong>Tecnología con propósito:</strong> Herramientas elegidas estratégicamente.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="feature-box glass-card accent-box">
+                        <h2 class="box-title text-white" data-i18n="sec-title">8. Sectores que apoyamos</h2>
+                        <ul class="styled-list list-light">
+                            <li data-i18n="sec-1"><strong>Comercio y distribución:</strong> Inventarios, ventas y pedidos.</li>
+                            <li data-i18n="sec-2"><strong>Servicios profesionales:</strong> Gestión de información y clientes.</li>
+                            <li data-i18n="sec-3"><strong>Pequeñas y medianas empresas:</strong> Digitalización operativa.</li>
+                            <li data-i18n="sec-4"><strong>Agroindustria:</strong> Registros y herramientas de control.</li>
+                            <li data-i18n="sec-5"><strong>Emprendimientos digitales:</strong> Presencia web y plataformas.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 10. Preguntas frecuentes (Textos centrados y ancho completo) -->
+            <section id="faq" class="container">
+                <div class="section-header text-center">
+                    <div class="section-badge mx-auto" data-i18n="faq-badge">10. Preguntas frecuentes</div>
+                    <h2 class="section-title" data-i18n="faq-title">Resolvemos tus dudas</h2>
+                </div>
+                
+                <div class="faq-grid">
+                    <div class="faq-item glass-card">
+                        <div class="faq-q" data-i18n="faq-1-q">¿Qué tipo de software pueden desarrollar?</div>
+                        <p class="faq-a" data-i18n="faq-1-a">Evaluamos proyectos de aplicaciones web, sistemas de gestión, informatización y herramientas personalizadas, determinando funcionalidades según requerimientos.</p>
+                    </div>
+                    <div class="faq-item glass-card">
+                        <div class="faq-q" data-i18n="faq-2-q">¿Puedo solicitar una solución para mi empresa?</div>
+                        <p class="faq-a" data-i18n="faq-2-a">Sí. Describe tus procesos, el problema a resolver y los resultados que buscas. Con esa información te preparamos una propuesta.</p>
+                    </div>
+                    <div class="faq-item glass-card">
+                        <div class="faq-q" data-i18n="faq-3-q">¿Cuánto cuesta desarrollar un sistema?</div>
+                        <p class="faq-a" data-i18n="faq-3-a">El costo depende de la complejidad, funcionalidades, integraciones y tiempo de desarrollo. La cotización se prepara tras definir el alcance.</p>
+                    </div>
+                    <div class="faq-item glass-card">
+                        <div class="faq-q" data-i18n="faq-4-q">¿Cuánto tiempo tarda un proyecto?</div>
+                        <p class="faq-a" data-i18n="faq-4-a">El plazo depende de los requerimientos y la disponibilidad de información. Se establece una estimación después del análisis inicial.</p>
+                    </div>
+                    <div class="faq-item glass-card" style="grid-column: 1 / -1;">
+                        <div class="faq-q" data-i18n="faq-5-q">¿Pueden mejorar un sistema existente?</div>
+                        <p class="faq-a" data-i18n="faq-5-a">Sí, evaluamos el sistema actual para determinar si es viable corregir errores, mejorar funciones u optimizar su rendimiento.</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- 11. Hablemos de tu próximo proyecto (Footer) -->
+        <footer id="contacto" class="footer">
+            <div class="footer-bg-shape"></div>
+            <div class="container footer-content">
+                <div class="footer-cta text-center">
+                    <h2 data-i18n="foot-title">11. Hablemos de tu próximo proyecto</h2>
+                    <p data-i18n="foot-desc">En ROALDIX Technologies queremos conocer tus objetivos y ayudarte a convertirlos en una solución digital. Analizaremos tu información para determinar los siguientes pasos.</p>
+                    
+                    <div class="contact-cards">
+                        <a href="mailto:info@codecoresystems.com" class="contact-card">
+                            <i class="fas fa-envelope"></i>
+                            <span>Email</span>
+                            <strong>info@codecoresystems.com</strong>
+                        </a>
+                        <a href="https://wa.me/529715644650" target="_blank" class="contact-card">
+                            <i class="fab fa-whatsapp"></i>
+                            <span>WhatsApp</span>
+                            <strong>+52 971 564 4650</strong>
+                        </a>
+                        <div class="contact-card">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Ubicación</span>
+                            <strong data-i18n="foot-loc">México</strong>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="footer-bottom">
+                    <div class="footer-logo">
+                        <i class="fas fa-layer-group"></i> ROALDIX Technologies
+                    </div>
+                    <p data-i18n="foot-rights">&copy; 2026 ROALDIX Technologies. Todos los derechos reservados.</p>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- Translations & Scripting -->
+    <script>
+        const translations = {
+            es: {
+                "nav-about": "Nosotros", "nav-services": "Servicios", "nav-sectors": "Sectores", "nav-faq": "Preguntas", "nav-contact": "Cotizar <i class='fas fa-arrow-right'></i>",
+                "hero-badge": "Innovación Tecnológica", "hero-title": "Tecnología que transforma ideas en <span class='text-gradient'>soluciones digitales</span>",
+                "hero-desc": "Convertimos ideas y necesidades empresariales en soluciones tecnológicas funcionales, eficientes y escalables. Desarrollamos herramientas digitales que ayudan a las empresas a optimizar operaciones y aprovechar la transformación digital.",
+                "hero-tag1": "<i class='fas fa-code'></i> Desarrollo de software", "hero-tag2": "<i class='fas fa-globe'></i> Soluciones web", "hero-tag3": "<i class='fas fa-laptop-code'></i> Informatización",
+                "hero-btn1": "Conoce nuestros servicios", "hero-btn2": "<i class='fab fa-whatsapp'></i> Solicitar cotización",
+                "about-badge": "1. ¿Quiénes somos?", "about-title": "ROALDIX Technologies", "about-lead": "Somos una marca tecnológica enfocada en el desarrollo de software, la creación de soluciones digitales y la implementación de herramientas que contribuyen a mejorar la eficiencia de los negocios.",
+                "about-p": "Creemos que la tecnología debe ser práctica, accesible y capaz de generar valor. Buscamos desarrollar soluciones que no solo respondan a los desafíos actuales, sino que permitan crecer, adaptarse y evolucionar en un entorno digital cada vez más competitivo.",
+                "about-mission-t": "Nuestra misión", "about-mission-d": "Desarrollar soluciones confiables y funcionales que ayuden a empresas a optimizar procesos.", "about-vision-t": "Nuestra visión", "about-vision-d": "Consolidarnos como marca reconocida por nuestra innovación y compromiso digital.",
+                "val-badge": "4. Nuestros Valores", "val-title": "Los pilares de nuestro trabajo",
+                "val-1-t": "Innovación", "val-1-d": "Exploramos nuevas ideas para desarrollar soluciones a necesidades reales.", "val-2-t": "Calidad", "val-2-d": "Priorizamos la funcionalidad, claridad de código y mejora continua.", "val-3-t": "Compromiso", "val-3-d": "Soluciones alineadas con las necesidades de cada proyecto.", "val-4-t": "Adaptabilidad", "val-4-d": "Consideramos los recursos y metas específicas de cada cliente.", "val-5-t": "Transparencia", "val-5-d": "Comunicación clara sobre alcance, costos y tiempos.", "val-6-t": "Confidencialidad", "val-6-d": "Tratamos la información con máxima responsabilidad y seguridad.",
+                "srv-badge": "5. Nuestros servicios", "srv-title": "Soluciones tecnológicas a la medida", "srv-sub": "Potencia tu negocio con nuestras herramientas y experiencia digital.",
+                "srv-1-t": "Desarrollo a medida", "srv-1-d": "Sistemas de gestión, aplicaciones operativas y herramientas digitales personalizadas.", "srv-2-t": "Diseño Web", "srv-2-d": "Páginas web corporativas y sitios optimizados adaptables a todos los dispositivos.", "srv-3-t": "Informatización", "srv-3-d": "Digitalización de flujos de trabajo, integración de sistemas y gestión eficiente de la información.", "srv-4-t": "Inteligencia artificial", "srv-4-d": "Asistentes virtuales, procesamiento de documentos y soluciones inteligentes.", "srv-5-t": "Bases de datos", "srv-5-d": "Diseño, estructuración y migración de información de forma segura.", "srv-6-t": "Soporte tecnológico", "srv-6-d": "Mantenimiento, actualizaciones y optimización de rendimiento continuo.",
+                "met-badge": "6. Metodología", "met-title": "Cómo trabajamos", "met-lead": "Organizamos cada proyecto en 6 etapas clave para asegurar una entrega de calidad, enfocada en los objetivos acordados.",
+                "met-1-t": "Análisis", "met-1-d": "Identificamos el problema y definimos objetivos.", "met-2-t": "Planificación", "met-2-d": "Establecemos alcance y recursos.", "met-3-t": "Diseño", "met-3-d": "Estructura y experiencia de usuario.", "met-4-t": "Desarrollo", "met-4-d": "Construcción por etapas con buenas prácticas.", "met-5-t": "Pruebas", "met-5-d": "Validación de funcionamiento y corrección.", "met-6-t": "Entrega", "met-6-d": "Lanzamiento, mantenimiento y mejora.",
+                "why-title": "7. ¿Por qué elegirnos?",
+                "why-1": "<strong>Soluciones adaptadas:</strong> Propuestas a partir de tus necesidades concretas.", "why-2": "<strong>Resultados prácticos:</strong> Tecnología enfocada en resolver problemas reales.", "why-3": "<strong>Visión de crecimiento:</strong> Desarrollos preparados para escalar a futuro.", "why-4": "<strong>Comunicación clara:</strong> Transparencia en entregables y responsabilidades.", "why-5": "<strong>Tecnología con propósito:</strong> Herramientas elegidas estratégicamente.",
+                "sec-title": "8. Sectores que apoyamos",
+                "sec-1": "<strong>Comercio y distribución:</strong> Inventarios, ventas y pedidos.", "sec-2": "<strong>Servicios profesionales:</strong> Gestión de información y clientes.", "sec-3": "<strong>Pequeñas y medianas empresas:</strong> Digitalización operativa.", "sec-4": "<strong>Agroindustria:</strong> Registros y herramientas de control.", "sec-5": "<strong>Emprendimientos digitales:</strong> Presencia web y plataformas.",
+                "faq-badge": "10. Preguntas frecuentes", "faq-title": "Resolvemos tus dudas",
+                "faq-1-q": "¿Qué tipo de software pueden desarrollar?", "faq-1-a": "Evaluamos proyectos de aplicaciones web, sistemas de gestión, informatización y herramientas personalizadas, determinando funcionalidades según requerimientos.",
+                "faq-2-q": "¿Puedo solicitar una solución para mi empresa?", "faq-2-a": "Sí. Describe tus procesos, el problema a resolver y los resultados que buscas. Con esa información te preparamos una propuesta.",
+                "faq-3-q": "¿Cuánto cuesta desarrollar un sistema?", "faq-3-a": "El costo depende de la complejidad, funcionalidades, integraciones y tiempo de desarrollo. La cotización se prepara tras definir el alcance.",
+                "faq-4-q": "¿Cuánto tiempo tarda un proyecto?", "faq-4-a": "El plazo depende de los requerimientos y la disponibilidad de información. Se establece una estimación después del análisis inicial.",
+                "faq-5-q": "¿Pueden mejorar un sistema existente?", "faq-5-a": "Sí, evaluamos el sistema actual para determinar si es viable corregir errores, mejorar funciones u optimizar su rendimiento.",
+                "foot-title": "11. Hablemos de tu próximo proyecto", "foot-desc": "En ROALDIX Technologies queremos conocer tus objetivos y ayudarte a convertirlos en una solución digital. Analizaremos tu información para determinar los siguientes pasos.",
+                "foot-loc": "México", "foot-rights": "&copy; 2026 ROALDIX Technologies. Todos los derechos reservados."
+            },
+            en: {
+                "nav-about": "About Us", "nav-services": "Services", "nav-sectors": "Sectors", "nav-faq": "FAQ", "nav-contact": "Get Quote <i class='fas fa-arrow-right'></i>",
+                "hero-badge": "Technological Innovation", "hero-title": "Technology that transforms ideas into <span class='text-gradient'>digital solutions</span>",
+                "hero-desc": "We convert ideas and business needs into functional, efficient, and scalable technological solutions. We develop digital tools that help companies optimize operations and leverage digital transformation.",
+                "hero-tag1": "<i class='fas fa-code'></i> Custom Software", "hero-tag2": "<i class='fas fa-globe'></i> Web Solutions", "hero-tag3": "<i class='fas fa-laptop-code'></i> Computerization",
+                "hero-btn1": "Explore our services", "hero-btn2": "<i class='fab fa-whatsapp'></i> Request Quote",
+                "about-badge": "1. Who we are", "about-title": "ROALDIX Technologies", "about-lead": "We are a technology brand focused on software development, creating digital solutions, and implementing tools that help improve business efficiency.",
+                "about-p": "We believe technology should be practical, accessible, and capable of generating value. We seek to develop solutions that not only respond to current challenges but also allow growth, adaptation, and evolution in an increasingly competitive digital environment.",
+                "about-mission-t": "Our Mission", "about-mission-d": "Develop reliable and functional solutions that help companies optimize processes.", "about-vision-t": "Our Vision", "about-vision-d": "Consolidate as a recognized brand for our innovation and digital commitment.",
+                "val-badge": "4. Our Values", "val-title": "The pillars of our work",
+                "val-1-t": "Innovation", "val-1-d": "We explore new ideas to develop solutions to real needs.", "val-2-t": "Quality", "val-2-d": "We prioritize functionality, clean code, and continuous improvement.", "val-3-t": "Commitment", "val-3-d": "Solutions aligned with the needs of each project.", "val-4-t": "Adaptability", "val-4-d": "We consider the specific resources and goals of each client.", "val-5-t": "Transparency", "val-5-d": "Clear communication about scope, costs, and timelines.", "val-6-t": "Confidentiality", "val-6-d": "We treat information with the highest responsibility and security.",
+                "srv-badge": "5. Our services", "srv-title": "Tailor-made tech solutions", "srv-sub": "Boost your business with our tools and digital expertise.",
+                "srv-1-t": "Custom Development", "srv-1-d": "Management systems, operational apps, and personalized digital tools.", "srv-2-t": "Web Design", "srv-2-d": "Corporate websites and optimized sites adaptable to all devices.", "srv-3-t": "Computerization", "srv-3-d": "Workflow digitization, system integration, and computerized information management.", "srv-4-t": "Artificial Intelligence", "srv-4-d": "Virtual assistants, document processing, and smart solutions.", "srv-5-t": "Databases", "srv-5-d": "Secure design, structuring, and information migration.", "srv-6-t": "Tech Support", "srv-6-d": "Continuous maintenance, updates, and performance optimization.",
+                "met-badge": "6. Methodology", "met-title": "How we work", "met-lead": "We organize each project into 6 key stages to ensure a quality delivery, focused on agreed objectives.",
+                "met-1-t": "Analysis", "met-1-d": "We identify the problem and define objectives.", "met-2-t": "Planning", "met-2-d": "We establish scope and resources.", "met-3-t": "Design", "met-3-d": "Structure and user experience.", "met-4-t": "Development", "met-4-d": "Phased construction with best practices.", "met-5-t": "Testing", "met-5-d": "Functional validation and correction.", "met-6-t": "Delivery", "met-6-d": "Launch, maintenance, and improvement.",
+                "why-title": "7. Why choose us?",
+                "why-1": "<strong>Tailored solutions:</strong> Proposals based on concrete needs.", "why-2": "<strong>Practical results:</strong> Technology focused on solving real problems.", "why-3": "<strong>Growth vision:</strong> Developments ready to scale in the future.", "why-4": "<strong>Clear communication:</strong> Transparency in deliverables and responsibilities.", "why-5": "<strong>Purposeful technology:</strong> Strategically chosen tools.",
+                "sec-title": "8. Sectors we support",
+                "sec-1": "<strong>Retail & distribution:</strong> Inventory, sales, and orders.", "sec-2": "<strong>Professional services:</strong> Information and client management.", "sec-3": "<strong>SMBs:</strong> Operational digitalization.", "sec-4": "<strong>Agribusiness:</strong> Records and control tools.", "sec-5": "<strong>Digital ventures:</strong> Web presence and platforms.",
+                "faq-badge": "10. FAQ", "faq-title": "Resolving your doubts",
+                "faq-1-q": "What kind of software can you develop?", "faq-1-a": "We evaluate projects for web apps, management systems, computerization, and custom tools based on requirements.",
+                "faq-2-q": "Can I request a solution for my company?", "faq-2-a": "Yes. Describe your processes, the problem, and desired results. We'll prepare a proposal.",
+                "faq-3-q": "How much does a system cost?", "faq-3-a": "Cost depends on complexity, features, and integrations. We provide a quote after defining the scope.",
+                "faq-4-q": "How long does a project take?", "faq-4-a": "Timeline depends on requirements and info availability. We give an estimate after initial analysis.",
+                "faq-5-q": "Can you improve an existing system?", "faq-5-a": "Yes, we assess current systems to fix bugs, add features, or optimize performance.",
+                "foot-title": "11. Let's talk about your next project", "foot-desc": "At ROALDIX Technologies we want to know your goals and help turn them into a digital solution. We'll analyze your info to determine the next steps.",
+                "foot-loc": "Mexico", "foot-rights": "&copy; 2026 ROALDIX Technologies. All rights reserved."
+            }
+        };
+
+        function setLang(lang) {
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (translations[lang] && translations[lang][key]) {
+                    el.innerHTML = translations[lang][key];
+                }
+            });
+            document.documentElement.lang = lang;
+            
+            const btns = document.querySelectorAll('.lang-btn');
+            if (btns.length >= 2) {
+                btns[0].classList.toggle('active', lang === 'es');
+                btns[1].classList.toggle('active', lang === 'en');
+            }
+        }
+
+        // Smooth in-container scrolling for anchor navigation links
+        document.addEventListener('DOMContentLoaded', () => {
+            const scrollContainer = document.getElementById('pageScroll');
+            document.querySelectorAll('a[href^="#"]').forEach(link => {
+                link.addEventListener('click', function(e) {
+                    const targetId = this.getAttribute('href').substring(1);
+                    if (!targetId) return;
+                    const targetEl = document.getElementById(targetId);
+                    if (targetEl && scrollContainer) {
+                        e.preventDefault();
+                        const targetOffsetTop = targetEl.offsetTop;
+                        scrollContainer.scrollTo({
+                            top: targetOffsetTop,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
