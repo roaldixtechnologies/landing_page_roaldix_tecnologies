@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Favicon / Icono de la pestaña del navegador -->
-    <link rel="icon" href="img/logo.png" type="image/png">
+    <link rel="icon" href="img/logo_fondo_blanco.jpg" type="image/jpeg">
 
     <!-- SEO Primary Meta Tags -->
     <title>ROALDIX Technologies | Desarrollo de Software, Soluciones Web e Informatización</title>
@@ -57,7 +57,7 @@
       "name": "ROALDIX Technologies",
       "image": "img/about_tech.jpg",
       "description": "Desarrollo de software a medida, soluciones web, informatización de procesos e innovación tecnológica para empresas.",
-      "telephone": "+529715644650",
+      "telephone": "+523231960575",
       "email": "info@codecoresystems.com",
       "address": {
         "@type": "PostalAddress",
@@ -155,7 +155,7 @@
             --gradient-accent: linear-gradient(135deg, #3b82f6 0%, #0ea5e9 100%);
 
             /* Container Widths & Spacing */
-            --nav-height: 64px;
+            --nav-height: 100px;
             --container-max: 1500px;
             --container-padding: 4%;
 
@@ -256,11 +256,11 @@
 
         .logo {
             color: white;
-            font-size: 1.45rem;
+            font-size: 1.65rem;
             font-weight: 800;
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 18px;
             letter-spacing: 0.5px;
         }
 
@@ -268,10 +268,30 @@
             color: var(--accent);
         }
 
+        .logo-img-wrapper {
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 5px;
+            border-radius: 16px;
+            background: var(--gradient-accent);
+            box-shadow: 0 0 25px var(--accent-glow);
+            transition: var(--transition);
+        }
+
+        .logo-img-wrapper:hover {
+            transform: scale(1.06);
+            box-shadow: 0 0 32px var(--accent);
+        }
+
         .logo-img {
-            height: 1.45rem;
+            height: 4.5rem;
             width: auto;
             object-fit: contain;
+            display: block;
+            border-radius: 12px;
+            background: #ffffff;
         }
 
         .nav-right {
@@ -970,7 +990,7 @@
             font-weight: 800;
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 16px;
         }
 
         .footer-logo i {
@@ -1071,7 +1091,10 @@
     <nav class="navbar" id="topNavbar">
         <div class="nav-container">
             <div class="logo">
-                <img src="img/logo.png" alt="Logo ROALDIX Technologies" class="logo-img"> ROALDIX Technologies
+                <div class="logo-img-wrapper">
+                    <img src="img/logo_fondo_blanco.jpg" alt="Logo ROALDIX Technologies" class="logo-img">
+                </div>
+                ROALDIX Technologies
             </div>
             <div class="nav-right">
                 <div class="nav-links">
@@ -1401,10 +1424,10 @@
                             <span>Email</span>
                             <strong>info@codecoresystems.com</strong>
                         </a>
-                        <a href="https://wa.me/529715644650" target="_blank" class="contact-card">
+                        <a href="https://wa.me/523231960575" target="_blank" class="contact-card">
                             <i class="fab fa-whatsapp"></i>
                             <span>WhatsApp</span>
-                            <strong>+52 971 564 4650</strong>
+                            <strong>+52 323 196 0575</strong>
                         </a>
                         <div class="contact-card">
                             <i class="fas fa-map-marker-alt"></i>
@@ -1416,7 +1439,10 @@
 
                 <div class="footer-bottom">
                     <div class="footer-logo">
-                        <img src="img/logo.png" alt="Logo ROALDIX Technologies" class="logo-img"> ROALDIX Technologies
+                        <div class="logo-img-wrapper">
+                            <img src="img/logo_fondo_blanco.jpg" alt="Logo ROALDIX Technologies" class="logo-img">
+                        </div>
+                        ROALDIX Technologies
                     </div>
                     <p data-i18n="foot-rights">&copy; 2026 ROALDIX Technologies. Todos los derechos reservados.</p>
                 </div>
@@ -1475,7 +1501,7 @@
                 "why-1": "<strong>Tailored solutions:</strong> Proposals based on concrete needs.", "why-2": "<strong>Practical results:</strong> Technology focused on solving real problems.", "why-3": "<strong>Growth vision:</strong> Developments ready to scale in the future.", "why-4": "<strong>Clear communication:</strong> Transparency in deliverables and responsibilities.", "why-5": "<strong>Purposeful technology:</strong> Strategically chosen tools.",
                 "sec-title": "8. Sectors we support",
                 "sec-1": "<strong>Retail & distribution:</strong> Inventory, sales, and orders.", "sec-2": "<strong>Professional services:</strong> Information and client management.", "sec-3": "<strong>SMBs:</strong> Operational digitalization.", "sec-4": "<strong>Agribusiness:</strong> Records and control tools.", "sec-5": "<strong>Digital ventures:</strong> Web presence and platforms.",
-                "faq-badge": "10. FAQ", "faq-title": "Resolving your doubts",
+                "faq-badge": "10. FAQ", "faq-title": "Resolve your doubts",
                 "faq-1-q": "What kind of software can you develop?", "faq-1-a": "We evaluate projects for web apps, management systems, computerization, and custom tools based on requirements.",
                 "faq-2-q": "Can I request a solution for my company?", "faq-2-a": "Yes. Describe your processes, the problem, and desired results. We'll prepare a proposal.",
                 "faq-3-q": "How much does a system cost?", "faq-3-a": "Cost depends on complexity, features, and integrations. We provide a quote after defining the scope.",
