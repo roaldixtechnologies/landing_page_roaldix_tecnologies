@@ -635,6 +635,38 @@
             border-color: rgba(59, 130, 246, 0.3);
         }
 
+        /* Impact Section Cards */
+        .impact-card {
+            background: white;
+            padding: 25px 20px;
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-soft);
+            border: 1px solid #e2e8f0;
+            text-align: center;
+            transition: var(--transition);
+        }
+
+        .impact-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-hover);
+            border-color: var(--accent);
+        }
+
+        .impact-icon {
+            font-size: 2.2rem;
+            color: var(--secondary);
+            margin-bottom: 12px;
+        }
+
+        .impact-card h4 {
+            font-size: 1.15rem;
+            margin-bottom: 8px;
+        }
+
+        .impact-card p {
+            font-size: 0.95rem;
+        }
+
         /* About & Vision/Mission */
         .vision-mission-cards {
             display: grid;
@@ -890,6 +922,94 @@
             max-width: 90%;
         }
 
+        /* Contact Form Styles */
+        .contact-form-wrapper {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            padding: 35px;
+            border-radius: var(--radius-lg);
+            max-width: 800px;
+            margin: 0 auto 40px;
+            text-align: left;
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .form-group.full-width {
+            grid-column: 1 / -1;
+        }
+
+        .form-group label {
+            color: #cbd5e1;
+            font-size: 0.95rem;
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 12px 16px;
+            border-radius: var(--radius-md);
+            color: white;
+            font-size: 1rem;
+            outline: none;
+            transition: var(--transition);
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            border-color: var(--accent);
+            box-shadow: 0 0 10px var(--accent-glow);
+        }
+
+        .form-group select option {
+            background: var(--primary);
+            color: white;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .form-submit-btn {
+            width: 100%;
+            background: #25d366;
+            color: white;
+            border: none;
+            padding: 14px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            transition: var(--transition);
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+        }
+
+        .form-submit-btn:hover {
+            background: #20ba5a;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.5);
+        }
+
         /* Footer - Compact & Closer to Content */
         .footer {
             background: var(--primary);
@@ -930,7 +1050,7 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
             gap: 20px;
-            margin-bottom: 40px;
+            margin-bottom: 30px;
         }
 
         .contact-card {
@@ -1046,6 +1166,14 @@
                 padding: 25px 20px;
             }
 
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-form-wrapper {
+                padding: 20px;
+            }
+
             .footer-bottom {
                 flex-direction: column;
                 gap: 15px;
@@ -1080,6 +1208,7 @@
             <div class="nav-right">
                 <div class="nav-links">
                     <a href="#nosotros" data-i18n="nav-about">Nosotros</a>
+                    <a href="#impacto" data-i18n="nav-impact">Impacto</a>
                     <a href="#servicios" data-i18n="nav-services">Servicios</a>
                     <a href="#sectores" data-i18n="nav-sectors">Sectores</a>
                     <a href="#faq" data-i18n="nav-faq">Preguntas</a>
@@ -1168,6 +1297,34 @@
                         <img src="img/about_tech.jpg"
                             alt="ROALDIX Technologies - Equipo de desarrollo de software y tecnología" class="about-img"
                             loading="lazy">
+                    </div>
+                </div>
+            </section>
+
+            <!-- 2. Impacto en el Negocio -->
+            <section id="impacto" class="section-full bg-light">
+                <div class="container">
+                    <div class="text-center" style="margin-bottom: 25px;">
+                        <div class="section-badge mx-auto" data-i18n="imp-badge">2. Impacto en tu Negocio</div>
+                        <h2 class="section-title" data-i18n="imp-title">Resultados reales para tu empresa</h2>
+                        <p class="section-subtitle" data-i18n="imp-sub">Nuestras soluciones tecnológicas están diseñadas para generar un retorno de inversión tangible.</p>
+                    </div>
+                    <div class="grid-3">
+                        <div class="impact-card">
+                            <div class="impact-icon"><i class="fas fa-chart-line"></i></div>
+                            <h4 data-i18n="imp-1-t">Optimización Operativa</h4>
+                            <p data-i18n="imp-1-d">Automatizamos tareas rutinarias para reducir tiempos de ejecución y minimizar errores humanos.</p>
+                        </div>
+                        <div class="impact-card">
+                            <div class="impact-icon"><i class="fas fa-dollar-sign"></i></div>
+                            <h4 data-i18n="imp-2-t">Reducción de Costos</h4>
+                            <p data-i18n="imp-2-d">Sistemas eficientes que disminuyen el gasto en procesos manuales y recursos redundantes.</p>
+                        </div>
+                        <div class="impact-card">
+                            <div class="impact-icon"><i class="fas fa-expand-arrows-alt"></i></div>
+                            <h4 data-i18n="imp-3-t">Escalabilidad Comercial</h4>
+                            <p data-i18n="imp-3-d">Infraestructuras preparadas para crecer al ritmo que tu volumen de negocio y clientes demanden.</p>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -1389,15 +1546,44 @@
             </section>
         </main>
 
-        <!-- 11. Hablemos de tu próximo proyecto (Footer) -->
+        <!-- 11. Hablemos de tu próximo proyecto (Footer con Formulario WhatsApp) -->
         <footer id="contacto" class="footer">
             <div class="footer-bg-shape"></div>
             <div class="container footer-content">
                 <div class="footer-cta text-center">
                     <h2 data-i18n="foot-title">11. Hablemos de tu próximo proyecto</h2>
                     <p data-i18n="foot-desc">En ROALDIX Technologies queremos conocer tus objetivos y ayudarte a
-                        convertirlos en una solución digital. Analizaremos tu información para determinar los siguientes
-                        pasos.</p>
+                        convertirlos en una solución digital. Completa el formulario y envíanos tu solicitud directamente por WhatsApp.</p>
+
+                    <!-- Formulario de contacto directo a WhatsApp -->
+                    <div class="contact-form-wrapper">
+                        <form id="whatsappForm" onsubmit="sendToWhatsApp(event)">
+                            <div class="form-grid">
+                                <div class="form-group">
+                                    <label for="clientName" data-i18n="form-name">Tu Nombre / Empresa</label>
+                                    <input type="text" id="clientName" required placeholder="Ej. Juan Pérez">
+                                </div>
+                                <div class="form-group">
+                                    <label for="clientService" data-i18n="form-service">Servicio de Interés</label>
+                                    <select id="clientService">
+                                        <option value="Desarrollo a medida">Desarrollo a medida</option>
+                                        <option value="Diseño Web">Diseño Web</option>
+                                        <option value="Informatización">Informatización</option>
+                                        <option value="Inteligencia Artificial">Inteligencia Artificial</option>
+                                        <option value="Bases de datos">Bases de datos</option>
+                                        <option value="Soporte tecnológico">Soporte tecnológico</option>
+                                    </select>
+                                </div>
+                                <div class="form-group full-width">
+                                    <label for="clientMsg" data-i18n="form-msg">Detalles del Proyecto u Objetivo</label>
+                                    <textarea id="clientMsg" required placeholder="Cuéntanos sobre tu proyecto o necesidad..."></textarea>
+                                </div>
+                            </div>
+                            <button type="submit" class="form-submit-btn">
+                                <i class="fab fa-whatsapp"></i> <span data-i18n="form-btn">Enviar consulta por WhatsApp</span>
+                            </button>
+                        </form>
+                    </div>
 
                     <div class="contact-cards">
                         <a href="mailto:info@codecoresystems.com" class="contact-card">
@@ -1407,7 +1593,7 @@
                         </a>
                         <a href="https://wa.me/523231960575" target="_blank" class="contact-card">
                             <i class="fab fa-whatsapp"></i>
-                            <span>WhatsApp</span>
+                            <span>WhatsApp Directo</span>
                             <strong>+52 323 196 0575</strong>
                         </a>
                         <div class="contact-card">
@@ -1430,7 +1616,7 @@
     <script>
         const translations = {
             es: {
-                "nav-about": "Nosotros", "nav-services": "Servicios", "nav-sectors": "Sectores", "nav-faq": "Preguntas", "nav-contact": "Cotizar <i class='fas fa-arrow-right'></i>",
+                "nav-about": "Nosotros", "nav-impact": "Impacto", "nav-services": "Servicios", "nav-sectors": "Sectores", "nav-faq": "Preguntas", "nav-contact": "Cotizar <i class='fas fa-arrow-right'></i>",
                 "hero-badge": "Innovación Tecnológica", "hero-title": "Tecnología que transforma ideas en <span class='text-gradient'>soluciones digitales</span>",
                 "hero-desc": "Convertimos ideas y necesidades empresariales en soluciones tecnológicas funcionales, eficientes y escalables. Desarrollamos herramientas digitales que ayudan a las empresas a optimizar operaciones y aprovechar la transformación digital.",
                 "hero-tag1": "<i class='fas fa-code'></i> Desarrollo de software", "hero-tag2": "<i class='fas fa-globe'></i> Soluciones web", "hero-tag3": "<i class='fas fa-laptop-code'></i> Informatización",
@@ -1438,6 +1624,10 @@
                 "about-badge": "1. ¿Quiénes somos?", "about-title": "ROALDIX Technologies", "about-lead": "Somos una marca tecnológica enfocada en el desarrollo de software, la creación de soluciones digitales y la implementación de herramientas que contribuyen a mejorar la eficiencia de los negocios.",
                 "about-p": "Creemos que la tecnología debe ser práctica, accesible y capaz de generar valor. Buscamos desarrollar soluciones que no solo respondan a los desafíos actuales, sino que permitan crecer, adaptarse y evolucionar en un entorno digital cada vez más competitivo.",
                 "about-mission-t": "Nuestra misión", "about-mission-d": "Desarrollar soluciones confiables y funcionales que ayuden a empresas a optimizar procesos.", "about-vision-t": "Nuestra visión", "about-vision-d": "Consolidarnos como marca reconocida por nuestra innovación y compromiso digital.",
+                "imp-badge": "2. Impacto en tu Negocio", "imp-title": "Resultados reales para tu empresa", "imp-sub": "Nuestras soluciones tecnológicas están diseñadas para generar un retorno de inversión tangible.",
+                "imp-1-t": "Optimización Operativa", "imp-1-d": "Automatizamos tareas rutinarias para reducir tiempos de ejecución y minimizar errores humanos.",
+                "imp-2-t": "Reducción de Costos", "imp-2-d": "Sistemas eficientes que disminuyen el gasto en procesos manuales y recursos redundantes.",
+                "imp-3-t": "Escalabilidad Comercial", "imp-3-d": "Infraestructuras preparadas para crecer al ritmo que tu volumen de negocio y clientes demanden.",
                 "val-badge": "4. Nuestros Valores", "val-title": "Los pilares de nuestro trabajo",
                 "val-1-t": "Innovación", "val-1-d": "Exploramos nuevas ideas para desarrollar soluciones a necesidades reales.", "val-2-t": "Calidad", "val-2-d": "Priorizamos la funcionalidad, claridad de código y mejora continua.", "val-3-t": "Compromiso", "val-3-d": "Soluciones alineadas con las necesidades de cada proyecto.", "val-4-t": "Adaptabilidad", "val-4-d": "Consideramos los recursos y metas específicas de cada cliente.", "val-5-t": "Transparencia", "val-5-d": "Comunicación clara sobre alcance, costos y tiempos.", "val-6-t": "Confidencialidad", "val-6-d": "Tratamos la información con máxima responsabilidad y seguridad.",
                 "srv-badge": "5. Nuestros servicios", "srv-title": "Soluciones tecnológicas a la medida", "srv-sub": "Potencia tu negocio con nuestras herramientas y experiencia digital.",
@@ -1454,11 +1644,12 @@
                 "faq-3-q": "¿Cuánto cuesta desarrollar un sistema?", "faq-3-a": "El costo depende de la complejidad, funcionalidades, integraciones y tiempo de desarrollo. La cotización se prepara tras definir el alcance.",
                 "faq-4-q": "¿Cuánto tiempo tarda un proyecto?", "faq-4-a": "El plazo depende de los requerimientos y la disponibilidad de información. Se establece una estimación después del análisis inicial.",
                 "faq-5-q": "¿Pueden mejorar un sistema existente?", "faq-5-a": "Sí, evaluamos el sistema actual para determinar si es viable corregir errores, mejorar funciones u optimizar su rendimiento.",
-                "foot-title": "11. Hablemos de tu próximo proyecto", "foot-desc": "En ROALDIX Technologies queremos conocer tus objetivos y ayudarte a convertirlos en una solución digital. Analizaremos tu información para determinar los siguientes pasos.",
+                "foot-title": "11. Hablemos de tu próximo proyecto", "foot-desc": "En ROALDIX Technologies queremos conocer tus objetivos y ayudarte a convertirlos en una solución digital. Completa el formulario y envíanos tu solicitud directamente por WhatsApp.",
+                "form-name": "Tu Nombre / Empresa", "form-service": "Servicio de Interés", "form-msg": "Detalles del Proyecto u Objetivo", "form-btn": "Enviar consulta por WhatsApp",
                 "foot-loc": "México", "foot-rights": "&copy; 2026 ROALDIX Technologies. Todos los derechos reservados."
             },
             en: {
-                "nav-about": "About Us", "nav-services": "Services", "nav-sectors": "Sectors", "nav-faq": "FAQ", "nav-contact": "Get Quote <i class='fas fa-arrow-right'></i>",
+                "nav-about": "About Us", "nav-impact": "Impact", "nav-services": "Services", "nav-sectors": "Sectors", "nav-faq": "FAQ", "nav-contact": "Get Quote <i class='fas fa-arrow-right'></i>",
                 "hero-badge": "Technological Innovation", "hero-title": "Technology that transforms ideas into <span class='text-gradient'>digital solutions</span>",
                 "hero-desc": "We convert ideas and business needs into functional, efficient, and scalable technological solutions. We develop digital tools that help companies optimize operations and leverage digital transformation.",
                 "hero-tag1": "<i class='fas fa-code'></i> Custom Software", "hero-tag2": "<i class='fas fa-globe'></i> Web Solutions", "hero-tag3": "<i class='fas fa-laptop-code'></i> Computerization",
@@ -1466,17 +1657,25 @@
                 "about-badge": "1. Who we are", "about-title": "ROALDIX Technologies", "about-lead": "We are a technology brand focused on software development, creating digital solutions, and implementing tools that help improve business efficiency.",
                 "about-p": "We believe technology should be practical, accessible, and capable of generating value. We seek to develop solutions that not only respond to current challenges but also allow growth, adaptation, and evolution in an increasingly competitive digital environment.",
                 "about-mission-t": "Our Mission", "about-mission-d": "Develop reliable and functional solutions that help companies optimize processes.", "about-vision-t": "Our Vision", "about-vision-d": "Consolidate as a recognized brand for our innovation and digital commitment.",
+                "imp-badge": "2. Business Impact", "imp-title": "Real results for your company", "imp-sub": "Our technological solutions are designed to generate a tangible return on investment.",
+                "imp-1-t": "Operational Optimization", "imp-1-d": "We automate routine tasks to reduce execution times and minimize human errors.",
+                "imp-2-t": "Cost Reduction", "imp-2-d": "Efficient systems that decrease spending on manual processes and redundant resources.",
+                "imp-3-t": "Commercial Scalability", "imp-3-d": "Infrastructures ready to grow at the pace demanded by your business volume and customers.",
                 "val-badge": "4. Our Values", "val-title": "The pillars of our work",
                 "val-1-t": "Innovation", "val-1-d": "We explore new ideas to develop solutions to real needs.", "val-2-t": "Quality", "val-2-d": "We prioritize functionality, clean code, and continuous improvement.", "val-3-t": "Commitment", "val-3-d": "Solutions aligned with the needs of each project.", "val-4-t": "Adaptability", "val-4-d": "We consider the specific resources and goals of each client.", "val-5-t": "Transparency", "val-5-d": "Clear communication about scope, costs, and timelines.", "val-6-t": "Confidentiality", "val-6-d": "We treat information with the highest responsibility and security.",
                 "srv-badge": "5. Our services",
                 "srv-title": "Tailor-made tech solutions", "srv-sub": "Boost your business with our tools and digital expertise.",
-                "srv-1-t": "Custom Development", "srv-1-d": "Management systems, operational apps, and personalized digital tools.", "srv-2-t": "Web Design", "srv-2-d": "Corporate websites and optimized sites adaptable to all devices.", "srv-3-t": "Computerization", "srv-3-d": "Workflow digitization, system integration, and computerized information management.", "srv-4-t": "Artificial Intelligence", "srv-4-d": "Virtual assistants, document processing, and smart solutions.",
-                "srv-5-t": "Databases", "srv-5-d": "Secure design, structuring, and information migration.", "srv-6-t": "Tech Support", "srv-6-d": "Continuous maintenance, updates, and performance optimization.",
+                "srv-1-t": "Custom Development", "srv-1-d": "Management systems, operational apps, and personalized digital tools.",
+                "srv-2-t": "Web Design", "srv-2-d": "Corporate websites and optimized sites adaptable to all devices.",
+                "srv-3-t": "Computerization", "srv-3-d": "Workflow digitization, system integration, and computerized information management.",
+                "srv-4-t": "Artificial Intelligence", "srv-4-d": "Virtual assistants, document processing, and smart solutions.",
+                "srv-5-t": "Databases", "srv-5-d": "Secure design, structuring, and information migration.",
+                "srv-6-t": "Tech Support", "srv-6-d": "Continuous maintenance, updates, and performance optimization.",
                 "met-badge": "6. Methodology", "met-title": "How we work", "met-lead": "We organize each project into 6 key stages to ensure a quality delivery, focused on agreed objectives.",
                 "met-1-t": "Analysis", "met-1-d": "We identify the problem and define objectives.", "met-2-t": "Planning", "met-2-d": "We establish scope and resources.", "met-3-t": "Design", "met-3-d": "Structure and user experience.", "met-4-t": "Development", "met-4-d": "Phased construction with best practices.", "met-5-t": "Testing", "met-5-d": "Functional validation and correction.", "met-6-t": "Delivery", "met-6-d": "Launch, maintenance, and improvement.",
                 "why-title": "7. Why choose us?",
                 "why-1": "<strong>Tailored solutions:</strong> Proposals based on concrete needs.", "why-2": "<strong>Practical results:</strong> Technology focused on solving real problems.", "why-3": "<strong>Growth vision:</strong> Developments ready to scale in the future.", "why-4": "<strong>Clear communication:</strong> Transparency in deliverables and responsibilities.", "why-5": "<strong>Purposeful technology:</strong> Strategically chosen tools.",
-                "sec-title": "8. Sectores que apoyamos",
+                "sec-title": "8. Sectors we support",
                 "sec-1": "<strong>Retail & distribution:</strong> Inventory, sales, and orders.", "sec-2": "<strong>Professional services:</strong> Information and client management.", "sec-3": "<strong>SMBs:</strong> Operational digitalization.", "sec-4": "<strong>Agribusiness:</strong> Records and control tools.", "sec-5": "<strong>Digital ventures:</strong> Web presence and platforms.",
                 "faq-badge": "10. FAQ", "faq-title": "Resolve your doubts",
                 "faq-1-q": "What kind of software can you develop?", "faq-1-a": "We evaluate projects for web apps, management systems, computerization, and custom tools based on requirements.",
@@ -1484,7 +1683,8 @@
                 "faq-3-q": "How much does a system cost?", "faq-3-a": "Cost depends on complexity, features, and integrations. We provide a quote after defining the scope.",
                 "faq-4-q": "How long does a project take?", "faq-4-a": "Timeline depends on requirements and info availability. We give an estimate after initial analysis.",
                 "faq-5-q": "Can you improve an existing system?", "faq-5-a": "Yes, we assess current systems to fix bugs, add features, or optimize performance.",
-                "foot-title": "11. Let's talk about your next project", "foot-desc": "At ROALDIX Technologies we want to know your goals and help turn them into a digital solution. We'll analyze your info to determine the next steps.",
+                "foot-title": "11. Let's talk about your next project", "foot-desc": "At ROALDIX Technologies we want to know your goals and help turn them into a digital solution. Fill out the form and send us your request directly via WhatsApp.",
+                "form-name": "Your Name / Company", "form-service": "Service of Interest", "form-msg": "Project Details or Objective", "form-btn": "Send inquiry via WhatsApp",
                 "foot-loc": "Mexico", "foot-rights": "&copy; 2026 ROALDIX Technologies. All rights reserved."
             }
         };
@@ -1503,6 +1703,22 @@
                 btns[0].classList.toggle('active', lang === 'es');
                 btns[1].classList.toggle('active', lang === 'en');
             }
+        }
+
+        // WhatsApp Form Submission Handler
+        function sendToWhatsApp(e) {
+            e.preventDefault();
+            const name = document.getElementById('clientName').value;
+            const service = document.getElementById('clientService').value;
+            const msg = document.getElementById('clientMsg').value;
+
+            const phoneNumber = "523231960575";
+            const text = `Hola, mi nombre/empresa es *${name}*.\nEstoy interesado en el servicio de *${service}*.\n\nDetalles del proyecto:\n${msg}`;
+            
+            const encodedText = encodeURIComponent(text);
+            const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodedText}`;
+            
+            window.open(whatsappURL, '_blank');
         }
 
         // Smooth in-container scrolling for anchor navigation links
