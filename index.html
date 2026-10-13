@@ -980,6 +980,37 @@
             min-height: 120px;
         }
 
+        .form-group input.input-error,
+        .form-group select.input-error,
+        .form-group textarea.input-error {
+            border-color: #ef4444 !important;
+            box-shadow: 0 0 10px rgba(239, 68, 68, 0.4) !important;
+        }
+
+        .form-error-msg {
+            display: none;
+            color: #f87171;
+            font-size: 0.85rem;
+            margin-top: 4px;
+            font-weight: 500;
+        }
+
+        .form-error-msg.visible {
+            display: block;
+            animation: fadeInError 0.2s ease-in-out;
+        }
+
+        @keyframes fadeInError {
+            from {
+                opacity: 0;
+                transform: translateY(-4px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
         .form-submit-btn {
             width: 100%;
             background: #25d366;
@@ -1519,29 +1550,43 @@
                     <p data-i18n="foot-desc">En ROALDIX Technologies queremos conocer tus objetivos y ayudarte a convertirlos en una solución digital. Completa el formulario y envíanos tu consulta directamente por WhatsApp.</p>
 
                     <div class="contact-form-wrapper">
-                        <form id="whatsappForm" onsubmit="sendToWhatsApp(event)">
+                        <form id="whatsappForm" onsubmit="sendToWhatsApp(event)" novalidate>
                             <div class="form-grid">
                                 <div class="form-group">
                                     <label for="clientName" data-i18n="form-name">Tu Nombre / Empresa</label>
-                                    <input type="text" id="clientName" required placeholder="Ej. Juan Pérez">
+                                    <input type="text" id="clientName" required placeholder="Ej. Juan Pérez" data-i18n-placeholder="form-name-ph">
+                                    <span class="form-error-msg" id="nameError" data-i18n="form-name-error">Por favor ingresa tu nombre o empresa.</span>
                                 </div>
                                 <div class="form-group">
                                     <label for="clientService" data-i18n="form-service">Servicio de Interés</label>
-                                    <select id="clientService">
-                                        <option value="Desarrollo y venta de software">Desarrollo y venta de software</option>
-                                        <option value="Diseño y desarrollo web">Diseño y desarrollo web</option>
-                                        <option value="Desarrollo de aplicaciones móviles">Desarrollo de aplicaciones móviles</option>
-                                        <option value="Inteligencia artificial y automatización">Inteligencia artificial y automatización</option>
-                                        <option value="Pruebas y calidad de software (QA)">Pruebas y calidad de software (QA)</option>
-                                        <option value="Mantenimiento y soporte de software">Mantenimiento y soporte de software</option>
-                                        <option value="Bases de datos e integración">Bases de datos e integración</option>
-                                        <option value="Seguridad informática">Seguridad informática</option>
-                                        <option value="Consultoría y asesoría tecnológica">Consultoría y asesoría tecnológica</option>
+                                    <select id="clientService" required>
+                                        <option value="" disabled selected data-i18n="form-service-ph">-- Selecciona un servicio --</option>
+                                        <option value="Desarrollo y venta de software" data-i18n="form-opt-1">Desarrollo y venta de software</option>
+                                        <option value="Diseño y desarrollo web" data-i18n="form-opt-2">Diseño y desarrollo web</option>
+                                        <option value="Desarrollo de aplicaciones móviles" data-i18n="form-opt-3">Desarrollo de aplicaciones móviles</option>
+                                        <option value="Inteligencia artificial y automatización" data-i18n="form-opt-4">Inteligencia artificial y automatización</option>
+                                        <option value="Pruebas y calidad de software (QA)" data-i18n="form-opt-5">Pruebas y calidad de software (QA)</option>
+                                        <option value="Mantenimiento y soporte de software" data-i18n="form-opt-6">Mantenimiento y soporte de software</option>
+                                        <option value="Bases de datos e integración" data-i18n="form-opt-7">Bases de datos e integración</option>
+                                        <option value="Seguridad informática" data-i18n="form-opt-8">Seguridad informática</option>
+                                        <option value="Consultoría y asesoría tecnológica" data-i18n="form-opt-9">Consultoría y asesoría tecnológica</option>
                                     </select>
+                                    <span class="form-error-msg" id="serviceError" data-i18n="form-service-error">Por favor selecciona un servicio de interés.</span>
+                                </div>
+                                <div class="form-group">
+                                    <label for="clientPhone" data-i18n="form-phone">Teléfono de Contacto</label>
+                                    <input type="tel" id="clientPhone" required placeholder="Ej. +52 323 123 4567" data-i18n-placeholder="form-phone-ph">
+                                    <span class="form-error-msg" id="phoneError" data-i18n="form-phone-error">Por favor ingresa un número de teléfono válido (mínimo 8 dígitos).</span>
+                                </div>
+                                <div class="form-group">
+                                    <label for="clientEmail" data-i18n="form-email">Correo Electrónico</label>
+                                    <input type="email" id="clientEmail" required placeholder="Ej. contacto@empresa.com" data-i18n-placeholder="form-email-ph">
+                                    <span class="form-error-msg" id="emailError" data-i18n="form-email-error">Por favor ingresa un correo electrónico válido.</span>
                                 </div>
                                 <div class="form-group full-width">
                                     <label for="clientMsg" data-i18n="form-msg">Detalles del Proyecto u Objetivo</label>
-                                    <textarea id="clientMsg" required placeholder="Cuéntanos sobre tu proyecto o necesidad..."></textarea>
+                                    <textarea id="clientMsg" required placeholder="Cuéntanos sobre tu proyecto o necesidad..." data-i18n-placeholder="form-msg-ph"></textarea>
+                                    <span class="form-error-msg" id="msgError" data-i18n="form-msg-error">Por favor ingresa los detalles del proyecto o consulta.</span>
                                 </div>
                             </div>
                             <button type="submit" class="form-submit-btn">
@@ -1621,7 +1666,25 @@
                 "faq-4-q": "¿Cuánto tiempo tarda un proyecto?", "faq-4-a": "El plazo depende de los requerimientos y la disponibilidad de información. Se establece una estimación después del análisis inicial.",
                 "faq-5-q": "¿Pueden mejorar un sistema existente?", "faq-5-a": "Sí, evaluamos el sistema actual para determinar si es viable corregir errores, mejorar funciones u optimizar su rendimiento.",
                 "foot-title": "11. Hablemos de tu próximo proyecto", "foot-desc": "En ROALDIX Technologies queremos conocer tus objetivos y ayudarte a convertirlos en una solución digital. Completa el formulario y envíanos tu consulta directamente por WhatsApp.",
-                "form-name": "Tu Nombre / Empresa", "form-service": "Servicio de Interés", "form-msg": "Detalles del Proyecto u Objetivo", "form-btn": "Enviar consulta por WhatsApp",
+                "form-name": "Tu Nombre / Empresa", "form-name-ph": "Ej. Juan Pérez", "form-name-error": "Por favor ingresa tu nombre o empresa.",
+                "form-service": "Servicio de Interés", "form-service-ph": "-- Selecciona un servicio --", "form-service-error": "Por favor selecciona un servicio de interés.",
+                "form-opt-1": "Desarrollo y venta de software",
+                "form-opt-2": "Diseño y desarrollo web",
+                "form-opt-3": "Desarrollo de aplicaciones móviles",
+                "form-opt-4": "Inteligencia artificial y automatización",
+                "form-opt-5": "Pruebas y calidad de software (QA)",
+                "form-opt-6": "Mantenimiento y soporte de software",
+                "form-opt-7": "Bases de datos e integración",
+                "form-opt-8": "Seguridad informática",
+                "form-opt-9": "Consultoría y asesoría tecnológica",
+                "form-phone": "Teléfono de Contacto", "form-phone-ph": "Ej. +52 323 123 4567",
+                "form-phone-empty": "Por favor ingresa tu teléfono de contacto.",
+                "form-phone-error": "Por favor ingresa un número de teléfono válido (mínimo 8 dígitos).",
+                "form-email": "Correo Electrónico", "form-email-ph": "Ej. contacto@empresa.com",
+                "form-email-empty": "Por favor ingresa tu correo electrónico.",
+                "form-email-error": "Por favor ingresa un correo electrónico válido.",
+                "form-msg": "Detalles del Proyecto u Objetivo", "form-msg-ph": "Cuéntanos sobre tu proyecto o necesidad...", "form-msg-error": "Por favor ingresa los detalles del proyecto o consulta.",
+                "form-btn": "Enviar consulta por WhatsApp",
                 "foot-loc": "México", "foot-rights": "&copy; 2026 ROALDIX Technologies. Todos los derechos reservados."
             },
             en: {
@@ -1651,7 +1714,7 @@
                 "srv-8-t": "Computer Security", "srv-8-d": "Application security assessment, vulnerability identification, and configuration reviews.",
                 "srv-9-t": "Tech Consulting & Advisory", "srv-9-d": "Business IT needs analysis, software project planning, and digital transformation.",
                 "met-badge": "6. Methodology", "met-title": "How we work", "met-lead": "We organize each project into 6 key stages to ensure a quality delivery, focused on agreed objectives.",
-                "met-1-t": "Analysis", "met-1-d": "We identify the problem and define objectives.", "met-2-t": "Planning", "met-2-d": "We establish scope and resources.", "met-3-t": "Design", "met-3-d": "Structure and user experience.", "met-4-t": "Development", "met-4-d": "Phased construction with best practices.", "met-5-t": "Testing", "met-5-d": "Functional validation and correction.", "met-6-t": "Delivery", "met-6-d": "Launch, maintenance, and improvement.",
+                "met-1-t": "Análisis", "met-1-d": "We identify the problem and define objectives.", "met-2-t": "Planning", "met-2-d": "We establish scope and resources.", "met-3-t": "Design", "met-3-d": "Structure and user experience.", "met-4-t": "Development", "met-4-d": "Phased construction with best practices.", "met-5-t": "Testing", "met-5-d": "Functional validation and correction.", "met-6-t": "Delivery", "met-6-d": "Launch, maintenance, and improvement.",
                 "why-title": "7. Why choose us?",
                 "why-1": "<strong>Tailored solutions:</strong> Proposals based on concrete needs.",
                 "why-2": "<strong>Practical results:</strong> Technology focused on solving real problems.",
@@ -1671,16 +1734,43 @@
                 "faq-4-q": "How long does a project take?", "faq-4-a": "Timeline depends on requirements and info availability. We give an estimate after initial analysis.",
                 "faq-5-q": "Can you improve an existing system?", "faq-5-a": "Yes, we assess current systems to fix bugs, add features, or optimize performance.",
                 "foot-title": "11. Let's talk about your next project", "foot-desc": "At ROALDIX Technologies we want to know your goals and help turn them into a digital solution. Fill out the form and send us your inquiry directly via WhatsApp.",
-                "form-name": "Your Name / Company", "form-service": "Service of Interest", "form-msg": "Project Details or Objective", "form-btn": "Enviar consulta por WhatsApp",
+                "form-name": "Your Name / Company", "form-name-ph": "e.g. John Doe", "form-name-error": "Please enter your name or company.",
+                "form-service": "Service of Interest", "form-service-ph": "-- Select a service --", "form-service-error": "Please select a service of interest.",
+                "form-opt-1": "Software Sales & Development",
+                "form-opt-2": "Web Design & Development",
+                "form-opt-3": "Mobile App Development",
+                "form-opt-4": "Artificial Intelligence & Automation",
+                "form-opt-5": "Software Testing & QA",
+                "form-opt-6": "Software Maintenance & Support",
+                "form-opt-7": "Databases & Integration",
+                "form-opt-8": "Computer Security",
+                "form-opt-9": "Tech Consulting & Advisory",
+                "form-phone": "Contact Phone", "form-phone-ph": "e.g. +1 555 123 4567",
+                "form-phone-empty": "Please enter your contact phone number.",
+                "form-phone-error": "Please enter a valid phone number (minimum 8 digits).",
+                "form-email": "Email Address", "form-email-ph": "e.g. contact@company.com",
+                "form-email-empty": "Please enter your email address.",
+                "form-email-error": "Please enter a valid email address.",
+                "form-msg": "Project Details or Objective", "form-msg-ph": "Tell us about your project or need...", "form-msg-error": "Please enter the project or inquiry details.",
+                "form-btn": "Send inquiry via WhatsApp",
                 "foot-loc": "Mexico", "foot-rights": "&copy; 2026 ROALDIX Technologies. All rights reserved."
             }
         };
 
+        let currentLang = 'es';
+
         function setLang(lang) {
+            currentLang = lang;
             document.querySelectorAll('[data-i18n]').forEach(el => {
                 const key = el.getAttribute('data-i18n');
                 if (translations[lang] && translations[lang][key]) {
                     el.innerHTML = translations[lang][key];
+                }
+            });
+            document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+                const key = el.getAttribute('data-i18n-placeholder');
+                if (translations[lang] && translations[lang][key]) {
+                    el.placeholder = translations[lang][key];
                 }
             });
             document.documentElement.lang = lang;
@@ -1694,12 +1784,132 @@
 
         function sendToWhatsApp(e) {
             e.preventDefault();
-            const name = document.getElementById('clientName').value;
-            const service = document.getElementById('clientService').value;
-            const msg = document.getElementById('clientMsg').value;
+
+            const nameEl = document.getElementById('clientName');
+            const serviceEl = document.getElementById('clientService');
+            const phoneEl = document.getElementById('clientPhone');
+            const emailEl = document.getElementById('clientEmail');
+            const msgEl = document.getElementById('clientMsg');
+
+            const nameError = document.getElementById('nameError');
+            const serviceError = document.getElementById('serviceError');
+            const phoneError = document.getElementById('phoneError');
+            const emailError = document.getElementById('emailError');
+            const msgError = document.getElementById('msgError');
+
+            let isValid = true;
+            let firstInvalidEl = null;
+
+            const name = nameEl.value.trim();
+            const service = serviceEl.value;
+            const phone = phoneEl.value.trim();
+            const email = emailEl.value.trim();
+            const msg = msgEl.value.trim();
+
+            const langDict = translations[currentLang] || translations.es;
+
+            // 1. Validar nombre
+            if (!name) {
+                nameEl.classList.add('input-error');
+                if (nameError) {
+                    nameError.textContent = langDict["form-name-error"];
+                    nameError.classList.add('visible');
+                }
+                isValid = false;
+                if (!firstInvalidEl) firstInvalidEl = nameEl;
+            } else {
+                nameEl.classList.remove('input-error');
+                if (nameError) nameError.classList.remove('visible');
+            }
+
+            // 2. Validar servicio seleccionado
+            if (!service) {
+                serviceEl.classList.add('input-error');
+                if (serviceError) {
+                    serviceError.textContent = langDict["form-service-error"];
+                    serviceError.classList.add('visible');
+                }
+                isValid = false;
+                if (!firstInvalidEl) firstInvalidEl = serviceEl;
+            } else {
+                serviceEl.classList.remove('input-error');
+                if (serviceError) serviceError.classList.remove('visible');
+            }
+
+            // 3. Validar teléfono (requerido, formato y longitud)
+            const phoneDigits = phone.replace(/\D/g, '');
+            const isPhoneFormatValid = /^[+]?[\d\s()\-.]+$/.test(phone);
+            const isPhoneValid = isPhoneFormatValid && phoneDigits.length >= 8 && phoneDigits.length <= 16;
+            if (!phone) {
+                phoneEl.classList.add('input-error');
+                if (phoneError) {
+                    phoneError.textContent = langDict["form-phone-empty"];
+                    phoneError.classList.add('visible');
+                }
+                isValid = false;
+                if (!firstInvalidEl) firstInvalidEl = phoneEl;
+            } else if (!isPhoneValid) {
+                phoneEl.classList.add('input-error');
+                if (phoneError) {
+                    phoneError.textContent = langDict["form-phone-error"];
+                    phoneError.classList.add('visible');
+                }
+                isValid = false;
+                if (!firstInvalidEl) firstInvalidEl = phoneEl;
+            } else {
+                phoneEl.classList.remove('input-error');
+                if (phoneError) phoneError.classList.remove('visible');
+            }
+
+            // 4. Validar correo electrónico (requerido y formato)
+            const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+            const isEmailValid = emailRegex.test(email);
+            if (!email) {
+                emailEl.classList.add('input-error');
+                if (emailError) {
+                    emailError.textContent = langDict["form-email-empty"];
+                    emailError.classList.add('visible');
+                }
+                isValid = false;
+                if (!firstInvalidEl) firstInvalidEl = emailEl;
+            } else if (!isEmailValid) {
+                emailEl.classList.add('input-error');
+                if (emailError) {
+                    emailError.textContent = langDict["form-email-error"];
+                    emailError.classList.add('visible');
+                }
+                isValid = false;
+                if (!firstInvalidEl) firstInvalidEl = emailEl;
+            } else {
+                emailEl.classList.remove('input-error');
+                if (emailError) emailError.classList.remove('visible');
+            }
+
+            // 5. Validar mensaje de proyecto
+            if (!msg) {
+                msgEl.classList.add('input-error');
+                if (msgError) {
+                    msgError.textContent = langDict["form-msg-error"];
+                    msgError.classList.add('visible');
+                }
+                isValid = false;
+                if (!firstInvalidEl) firstInvalidEl = msgEl;
+            } else {
+                msgEl.classList.remove('input-error');
+                if (msgError) msgError.classList.remove('visible');
+            }
+
+            if (!isValid) {
+                if (firstInvalidEl) firstInvalidEl.focus();
+                return;
+            }
 
             const phoneNumber = "523231960575";
-            const text = `Hola, mi nombre/empresa es *${name}*.\nEstoy interesado en el servicio de *${service}*.\n\nDetalles del proyecto:\n${msg}`;
+            const text = `Hola, mi nombre/empresa es *${name}*.\n` +
+                         `*Teléfono:* ${phone}\n` +
+                         `*Correo:* ${email}\n` +
+                         `*Servicio de Interés:* ${service}\n\n` +
+                         `*Detalles del proyecto:*\n${msg}`;
             
             const encodedText = encodeURIComponent(text);
             const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodedText}`;
@@ -1723,6 +1933,166 @@
                         });
                     }
                 });
+            });
+
+            // Función para validar la estructura del teléfono e impedir repeticiones no permitidas
+            function canAddPhoneChar(current, char, selStart, selEnd) {
+                if (!char) return true;
+                const next = current.slice(0, selStart) + char + current.slice(selEnd);
+
+                // 1. Solo caracteres permitidos: dígitos, +, espacio, guion, paréntesis
+                if (!/^[0-9+\s()\-]+$/.test(next)) {
+                    return false;
+                }
+
+                // 2. '+' solo en primera posición y no repetido
+                const plusMatches = next.match(/\+/g);
+                if (plusMatches && (plusMatches.length > 1 || next[0] !== '+')) {
+                    return false;
+                }
+
+                // 3. No permitir inicio con separadores erróneos (espacio, guion, ')')
+                if (/^[\s\-)].*/.test(next)) {
+                    return false;
+                }
+
+                // 4. No permitir caracteres repetidos consecutivamente ni separadores combinados
+                // Evita: espacios dobles '  ', guiones dobles '--', '+ ', '+-', ' -', '- ', etc.
+                if (/\s{2,}|--|\s-|-|\+[\s\-]/.test(next)) {
+                    return false;
+                }
+
+                // 5. Paréntesis '(' no repetido (máximo uno en el número)
+                const openParenMatches = next.match(/\(/g);
+                if (openParenMatches && openParenMatches.length > 1) {
+                    return false;
+                }
+
+                // 6. Paréntesis ')' no repetido y solo tras un '('
+                const closeParenMatches = next.match(/\)/g);
+                if (closeParenMatches) {
+                    if (closeParenMatches.length > 1) return false;
+                    if (!openParenMatches || next.indexOf('(') >= next.indexOf(')')) return false;
+                }
+
+                // 7. Evitar paréntesis vacíos o con separadores inmediatos '()', '(-', '( '
+                if (/\(\)|\(-\|\(-|\(\s/.test(next)) {
+                    return false;
+                }
+
+                // 8. Máximo de dígitos estándar internacional (máximo 15 dígitos numéricos)
+                const digits = next.replace(/\D/g, '');
+                if (digits.length > 15) {
+                    return false;
+                }
+
+                return true;
+            }
+
+            function sanitizePhoneValue(val) {
+                let cleaned = '';
+                for (let i = 0; i < val.length; i++) {
+                    const ch = val[i];
+                    if (canAddPhoneChar(cleaned, ch, cleaned.length, cleaned.length)) {
+                        cleaned += ch;
+                    }
+                }
+                return cleaned;
+            }
+
+            // Restringir caracteres no permitidos y respetar la estructura en tiempo real
+            const phoneInput = document.getElementById('clientPhone');
+            if (phoneInput) {
+                // Interceptar tecleo directo para impedir caracteres repetidos o estructuralmente inválidos
+                phoneInput.addEventListener('keydown', (e) => {
+                    if (
+                        e.key === 'Backspace' ||
+                        e.key === 'Delete' ||
+                        e.key === 'Tab' ||
+                        e.key === 'Escape' ||
+                        e.key === 'Enter' ||
+                        e.key === 'ArrowLeft' ||
+                        e.key === 'ArrowRight' ||
+                        e.key === 'ArrowUp' ||
+                        e.key === 'ArrowDown' ||
+                        e.key === 'Home' ||
+                        e.key === 'End' ||
+                        e.ctrlKey ||
+                        e.metaKey
+                    ) {
+                        return;
+                    }
+
+                    if (e.key.length === 1) {
+                        const start = phoneInput.selectionStart;
+                        const end = phoneInput.selectionEnd;
+                        if (!canAddPhoneChar(phoneInput.value, e.key, start, end)) {
+                            e.preventDefault();
+                        }
+                    }
+                });
+
+                // Soporte para teclados virtuales en dispositivos móviles
+                phoneInput.addEventListener('beforeinput', (e) => {
+                    if (e.data) {
+                        const start = phoneInput.selectionStart;
+                        const end = phoneInput.selectionEnd;
+                        if (!canAddPhoneChar(phoneInput.value, e.data, start, end)) {
+                            e.preventDefault();
+                        }
+                    }
+                });
+
+                // Sanitizar texto pegado carácter por carácter respetando la estructura
+                phoneInput.addEventListener('paste', (e) => {
+                    e.preventDefault();
+                    const pasteData = (e.clipboardData || window.clipboardData).getData('text') || '';
+                    const start = phoneInput.selectionStart;
+                    const end = phoneInput.selectionEnd;
+                    const current = phoneInput.value;
+                    let before = current.slice(0, start);
+                    let after = current.slice(end);
+                    let inserted = '';
+                    for (let i = 0; i < pasteData.length; i++) {
+                        const ch = pasteData[i];
+                        if (canAddPhoneChar(before + inserted, ch, (before + inserted).length, (before + inserted).length)) {
+                            inserted += ch;
+                        }
+                    }
+                    phoneInput.value = before + inserted + after;
+                    phoneInput.dispatchEvent(new Event('input'));
+                });
+
+                // Sanitización reactiva continua
+                phoneInput.addEventListener('input', () => {
+                    const val = phoneInput.value;
+                    const cleaned = sanitizePhoneValue(val);
+                    if (val !== cleaned) {
+                        phoneInput.value = cleaned;
+                    }
+                });
+            }
+
+            // Limpieza reactiva de errores al escribir o cambiar valores
+            const fieldErrorMap = {
+                clientName: 'nameError',
+                clientService: 'serviceError',
+                clientPhone: 'phoneError',
+                clientEmail: 'emailError',
+                clientMsg: 'msgError'
+            };
+
+            Object.entries(fieldErrorMap).forEach(([fieldId, errorId]) => {
+                const el = document.getElementById(fieldId);
+                if (el) {
+                    ['input', 'change'].forEach(evt => {
+                        el.addEventListener(evt, () => {
+                            el.classList.remove('input-error');
+                            const errEl = document.getElementById(errorId);
+                            if (errEl) errEl.classList.remove('visible');
+                        });
+                    });
+                }
             });
         });
     </script>
